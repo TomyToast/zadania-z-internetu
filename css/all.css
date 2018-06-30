@@ -1,0 +1,100 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+body {
+
+  }
+section {
+    width: 1285px;
+    height: 751px;
+     position: relative;
+     top: 0;
+     left: 0;
+     margin: 0 auto;
+}
+form {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    /* margin: 0 auto; */
+}
+button {
+    position: absolute;
+    top: 270px;
+    left: 270px;
+    width: 200px;
+    height: 50px;
+    background: #000;
+    color: yellow;
+    border: none;
+}
+button::after {
+    content: "";
+    width: 25px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    border-top: 25px solid #fff;
+    border-bottom: 25px solid #fff;
+    border-left: 25px solid #000;
+}
+button:hover {
+    background: yellow;
+    color: #000;
+}
+button:hover::after {
+    border-top: 25px solid #fff;
+    border-bottom: 25px solid #fff;
+    border-left: 25px solid yellow;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+}
+form input[type="checkbox"] {
+    margin-left: -9999px;
+}
+label {
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    position: absolute;
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+label[for="checkbox_yoda"] {
+    left: -10px;
+    top: 0;
+    background-image: url(../images/yoda.png);
+}
+label:hover::before {
+    content: attr(data-sentence);
+    width: 246px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 0 0 20px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+label[for="checkbox_trooper"] {
+    left: 260px;
+    top: 0;
+    background-image: url(../images/trooper.png)
+}
+label[for="checkbox_vader"] {
+    left: 530px;
+    top: 0;
+    background-image: url(../images/vader.png)
+}
+input:checked + label{
+    border: 3px solid black;
+    border-radius: 20px;
+}
