@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    //e.preventDefault();
 
     const yoda = document.getElementById('checkbox_yoda');
     const trooper = document.getElementById('checkbox_trooper');
