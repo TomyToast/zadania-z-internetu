@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (yoda.checked && trooper.checked || (yoda.checked && vader.checked) || (yoda.checked && trooper.checked && vader.checked)) {
             form.action ="https://www.youtube.com/watch";
         } else if ((trooper.checked) || (vader.checked) ) {
-            form.submit(function(e){
-                e.preventDefault();
+            form.submit(function(){
+                // e.preventDefault();
             })
             playMarch();
         } else if (trooper.checked && vader.checked) {
-            form.submit(function(e){
-                e.preventDefault();
+            form.submit(function(){
+                // e.preventDefault();
             })
             playMarch();
         } else {
@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    document.addEventListener('submit', function() {
+    document.addEventListener('submit', function(e) {
+        e.preventDefault();
         checkBoxes();
     })
 });
